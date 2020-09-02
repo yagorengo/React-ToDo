@@ -22,7 +22,7 @@ const ToDoItem = ({item,changeCompleted}) => {
             <Switch
                 edge="end"
                 checked={item.completed}
-                onChange={(event)=>handleOnChange(event.target.checked)}
+                onChange={(event)=>handleOnChange(item)}
                 inputProps={{ 'aria-label': 'primary checkbox' }}
             />
             </ListItemSecondaryAction>
@@ -30,9 +30,8 @@ const ToDoItem = ({item,changeCompleted}) => {
         </div>
     )
 
-    function handleOnChange(e){
-        console.log("evento", e , "id item", item.id)
-      changeCompleted(e,item.id)
+    function handleOnChange(item){
+      changeCompleted(item)
     }
 }
 

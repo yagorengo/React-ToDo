@@ -30,14 +30,8 @@ const Todos = ({idUser, newTitle}) => {
         }
     }, [todos])
 
-    const changeComplete = (e,id) =>{
-
-     let nuevoA =   toDos.map((item)=>{
-            if (item.id ===id){
-                item.completed = e
-            }
-        })
-        console.log("nuevo Array", nuevoA)
+    const changeComplete = (item) =>{
+       
     }
 
     useEffect(() => {

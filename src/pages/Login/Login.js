@@ -44,7 +44,7 @@ const Login = ()=> {
 
     return (
     <div>
-        {isLogin ?
+        {!isLogin ?
         <Grid container spacing={0} justify="center" direction="row">
         <Grid item>
             <Grid
@@ -110,7 +110,7 @@ const Login = ()=> {
             </Grid>
         </Grid>
     </Grid>
-    :<Home user= {1}/> }
+    :<Home user= {userLogin.id}/> }
         
     </div>
 );
